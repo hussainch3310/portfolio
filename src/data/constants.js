@@ -112,6 +112,8 @@ export const PROJECTS = [
   { id: 20, title: 'SKAS Tax Services', url: 'https://skastaxservices.ca/', category: 'Finance' },
   { id: 21, title: 'Home Grant Funds', url: 'https://homegrantfunds.com/', category: 'Finance' },
   { id: 22, title: 'Strix Defense', url: 'https://strixdefense.net/', category: 'Corporate' },
+  { id: 23, title: 'Curio Design Studio', url: 'https://curiodesignstudio.com/', category: 'E-commerce' },
+
 ];
 
 export const SERVICES = [
