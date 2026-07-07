@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3B82F6;
+  --color-secondary: #0EA5E9;
+  --color-accent: #14B8A6;
+  --color-dark: #F8FAFC; /* Text headings now light */
+  --color-light-bg: #020617; /* Background now dark slate */
+  --color-text-body: #94A3B8; /* Text body now slate-400 */
+
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter text-[var(--color-text-body)] bg-[var(--color-light-bg)] antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold text-[var(--color-dark)];
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1; 
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; 
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-[#0B1120]/80 backdrop-blur-md border border-white/5 shadow-xl;
+  }
+  
+  .glass-nav {
+    @apply bg-[#020617]/80 backdrop-blur-lg border-b border-white/5;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
+}
