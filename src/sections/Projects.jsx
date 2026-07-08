@@ -62,8 +62,12 @@ const Projects = () => {
                     </div>
                     {/* Placeholder for project screenshot */}
                     <div className="w-full h-full bg-white/5 mt-6 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-700">
-                      <div className="text-gray-400 font-poppins font-semibold text-lg">{project.title} Preview</div>
-                      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-500 flex items-center justify-center backdrop-blur-[0px] group-hover:backdrop-blur-sm opacity-0 group-hover:opacity-100">
+                      {project.image ? (
+                        <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" loading="lazy" />
+                      ) : (
+                        <div className="text-gray-400 font-poppins font-semibold text-lg">{project.title} Preview</div>
+                      )}
+                      <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-500 flex items-center justify-center backdrop-blur-[0px] group-hover:backdrop-blur-sm opacity-0 group-hover:opacity-100">
                          <a 
                           href={project.url} 
                           target="_blank" 
